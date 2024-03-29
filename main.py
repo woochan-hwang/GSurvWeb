@@ -19,7 +19,7 @@ import pandas as pd
 
 from app.components import interactive
 from app.components import experiment
-from app.components import data_summary
+# from app.components import data_summary
 
 
 # MAIN SCRIPT --------------------------------------------------------------
