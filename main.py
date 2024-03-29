@@ -110,7 +110,7 @@ def main(dev_mode=False, path_to_local_data='data/example_data_template.xlsx', v
                 st.session_state[states] = False
         for states in ['app_mode', 'prev_app_mode']:
             if states not in st.session_state:
-                st.session_state[states] = 'Data Summary'
+                st.session_state[states] = 'Interactive'
         # select app mode and refresh session state on change
         if dev_mode:
             app_mode = st.sidebar.selectbox(
