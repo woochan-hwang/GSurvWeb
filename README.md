@@ -40,7 +40,7 @@ This app has been developed based on [Streamlit](https://streamlit.io/), a pytho
 
 This project is set up using Docker. Use the provided Dockerfile and .devcontainer.json to build your docker image. 'Requirements.txt' contains all dependencies and will be automatically run when set up using devcontainer. 
 
-Alternatively, you can set up your own python environment (ver>=3.8) and use pip.
+Alternatively, you can set up your own python environment and use pip. Please use python ver 3.9 (24.03.29 minor issues with previous sklearn version not working with 3.11). 
  ```bash
 pip install -r requirements.txt
 ```
