@@ -115,20 +115,21 @@ def main(dev_mode=False, path_to_local_data='data/example_data_template.xlsx', v
         if dev_mode:
             app_mode = st.sidebar.selectbox(
                     'Select mode',
-                    ['Data Summary', 'Interactive', 'Experiment', 'Develop'],
+                    ['Interactive', 'Experiment', 'Data Summary', 'Develop'],
                     key='app_mode',
                     on_change=reset_session_state(verbose=verbose)
                 )
         else:
             app_mode = st.sidebar.selectbox(
                     'Select mode',
-                    ['Data Summary', 'Interactive', 'Experiment'],
+                    ['Interactive', 'Experiment', 'Data Summary'],
                     key='app_mode',
                     on_change=reset_session_state(verbose=verbose)
                 )
         # run selected app mode
         if app_mode == 'Data Summary':
-            data_summary.data_summary(file)
+            # data_summary.data_summary(file)
+            st.write('Data Summary is currently deactivated due to issues with pandas profiling and pydantic version')
         elif app_mode == 'Interactive':
             interactive.interactive(file, verbose=verbose)
         elif app_mode == 'Experiment':
